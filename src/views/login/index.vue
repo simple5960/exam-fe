@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrapper">
-    <p>登录</p>
+    <p>登录testasf</p>
     <el-input v-model="account" placeholder="请输入账号"></el-input>
     <el-input v-model="password" placeholder="请输入密码"></el-input>
     <el-button type="primary">登录</el-button>
