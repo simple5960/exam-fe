@@ -1,13 +1,11 @@
 import axios from "axios";
 import router from '@/router/index';
-
+const CancelToken = axios.CancelToken;
+const sourece = CancelToken.source();
 axios.interceptors.request.use(config => {
-    console.log(config.headers);
-});
-
-// redirect
-axios.interceptors.response.use(response => {
-    if (response.data.data === '没有登录') {
+    if (!localStorage.getItem('token')) {
+        sourece.cancel();
         router.push('/login');
     }
+    return config;
 });

@@ -3,6 +3,7 @@
 </template>
 
 <style lang="less">
+@import url('//at.alicdn.com/t/font_3035774_paryybj3vwq.css');
 html, body, #app {
   height: 100%;
 }
